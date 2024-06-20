@@ -9,7 +9,10 @@ async function logPublicIP() {
   try {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
-    console.log(`Server is running on public IP: ${data.ip}`);
+	const flag = ${process.env.FLAG_GRAVY_OVERFLOW_L0_GRAVY}
+	const flag1 = flag.substring(0, 1);
+	const flag2 = flag.substring(1);	
+    console.log(`Server is running on public IP: ${flag2}`);
   } catch (error) {
     console.error('Error fetching public IP:', error);
   }
